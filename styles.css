@@ -13,21 +13,24 @@ body {
 
 header {
   padding: 0;
-  height: 30px;
-  background-color: #383230;
+  margin: 0;
+  height: 90px;
 
   nav {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding-inline: 100px;
 
-    .links {
+    .links,
+    .row {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       list-style: none;
       margin: 0;
-      padding-block: 8px;
+      padding-inline: 100px;
+    }
+
+    .links {
+      height: 30px;
+      background-color: #383230;
 
       a {
         text-decoration: none;
@@ -44,14 +47,7 @@ header {
     }
 
     .row {
-      display: flex;
-      justify-content: space-between;
-      list-style: none;
-      margin: 0;
-
-      a {
-        align-content: center;
-      }
+      height: 60px;
 
       ul {
         display: flex;
@@ -62,9 +58,18 @@ header {
         padding: 0;
 
         li {
-          font-family: var(--body-font);
-          font-size: 12px;
-          color: #383230;
+
+          a {
+            align-content: center;
+            text-decoration: none;
+            font-family: var(--body-font);
+            font-size: 12px;
+            color: #383230;
+
+            &:hover {
+              font-weight: 600;
+            }
+          }
         }
       }
     }
@@ -88,7 +93,7 @@ main {
       font-weight: 400;
       letter-spacing: 3.2px;
       margin: 0;
-      padding-top: 137px;
+      padding-top: 76px;
     }
   }
 
@@ -138,9 +143,181 @@ main {
       align-items: center;
       justify-content: center;
       list-style: none;
-      margin: 83px 0 100px;
+      margin-block: 83px 0;
       padding: 0;
       gap: 50px;
       height: 80px;
+    }
+  }
+
+  .hygiene {
+
+    ul {
+      display: flex;
+      gap: 40px;
+      list-style: none;
+      margin-block: 100px 0;
+      padding-inline: 80px;
+
+      li {
+
+        h4 {
+          font-family: var(--head-font);
+          font-size: 25px;
+          font-weight: 400;
+          letter-spacing: 0.7px;
+          margin-block: 8px 11px;
+        }
+
+        p {
+          font-size: 14px;
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  .new-arrivals {
+    display: flex;
+    gap: 108px;
+    align-items: center;
+    padding-inline: 80px;
+    margin-block: 118px 88px;
+
+
+    aside {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      h2 {
+        font-family: var(--head-font);
+        font-size: 36px;
+        font-weight: 400;
+        letter-spacing: 2.4px;
+        margin: 0;
+      }
+
+      p {
+        font-size: 15px;
+        margin: 0;
+        padding: 0;
+      }
+
+      button {
+        width: 154px;
+        height: 42px;
+        background-color: #fff;
+        border: 1px solid #000;
+        font-family: var(--body-font);
+        font-size: 13px;
+        font-weight: 400;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #000;
+          color: #fff;
+          transition: 0.5s;
+        }
+      }
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 10px;
+      list-style: none;
+
+      li {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 10px;
+        border: 1px solid #E0DBD2;
+        width: 287px;
+        height: 434px;
+
+        span {
+          font-family: var(--mono-font);
+          font-size: 11px;
+          font-weight: 400;
+          text-transform: uppercase;
+          margin: 0;
+          padding: 0;
+          position: absolute;
+          top: 11px;
+          left: 11px;
+        }
+
+        button {
+          position: absolute;
+          top: 255px;
+          left: 15px;
+          display: flex;
+          flex-direction: row-reverse;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          width: 256px;
+          height: 34px;
+          padding: 0;
+          border: 1px solid #000;
+          background-color: #fff;
+          font-size: 12px;
+          font-weight: 400;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #000;
+            color: #fff;
+            transition: 0.3s;
+
+            img {
+              filter: invert(1);
+            }
+          }
+        }
+
+        p {
+          font-family: var(--head-font);
+          font-size: 16px;
+          font-weight: 400;
+          letter-spacing: 0.4px;
+          margin: 0;
+          padding: 0;
+        }
+
+      }
+
+      .jewelry-first {
+        background-image: url(images/new-arrivals-section/jewelry-first.png);
+        background-repeat: no-repeat;
+      }
+
+      .jewelry-second {
+        background-image: url(images/new-arrivals-section/jewelry-second.png);
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  .hr {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+
+    hr {
+      width: 490px;
+      margin: 0;
+      border: none;
+      height: 1px;
+      background-color: #000;
     }
   }
